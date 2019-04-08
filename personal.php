@@ -13,6 +13,28 @@ if(!isset($_SESSION["valid_user_email"])){
 <html>
 	
 <body>
+	<?php
+		$new_rating = new Ratings;
+		if(isset($_POST["submitRating"])){
+			$user = $_SESSION['u_id'];
+			$diseasename = $_POST["dieases"];
+			if($diseasename == 'malaria'){
+				$drugname = $_POST["malariaDrugs"];
+			}
+			if($diseasename == 'typhoid'){
+				$drugname = $_POST["typhoidDrugs"];
+			}
+			if($diseasename == 'cholera'){
+				$drugname = $_POST["choleraDrugs"];
+			}
+			$effect = $_POST["effect"];
+			$afford = $_POST["afford"];
+			$avail = $_POST["available"];
+			$new_rating->add_rating($user, $diseasename, $drugname, $effect, $afford, $avail);
+		}
+
+	?>
+
 	<div class="jumbotron">
 	  <h1> Welcome <?=$_SESSION["u_first"].'!'?></h1>
 	  <p class="lead"> Please, use below form to rate your recent used drugs. </p>
@@ -34,48 +56,113 @@ if(!isset($_SESSION["valid_user_email"])){
 		<div class="container">
 			<h2> Rate a Drug </h2>
 			<form method="POST">
-				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					 	Select Disease:
-				
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					 <a class="dropdown-item" href="#">Malaria</a>
-					 <a class="dropdown-item" href="#">Malaria</a>
-					 <a class="dropdown-item" href="#">Cholera</a>
-				</div>
-			    </button>
-				</div>
+				<div class="row">
+					<div class="col-2">
+						<label>Sickness & Drug:</label>
+					</div>
+					<div class="col-5">
+						<select class="custom-select" onchange="change(this)" 
+								name="dieases" id="dieases" required>
+							<option disabled selected value style="color:red">--Choose One--</option>
+							<option value="malaria">Malaria</option>
+							<option value="typhoid">Typloid</option>
+							<option value="cholera">Cholera</option>
+						</select>
+					</div>
+					<div class = "col-5">
+						<?php
+							// Create an instance of drug object
+							//malaria, typhoid, and cholera 
+							$getMalariaDrugs =  new Drugs();
+							$getMalariaDrugs->getMalariaDrugs();
 
-					<div class="form-group">
-				   	<label for="fname">First Name</label>
-				    <input type="text" class="form-control" id="fname" name="fname" 
-				    aria-describedby="fname" placeholder="Enter First Name">
-				</div>
+							$getTyphoidDrugs =  new Drugs();
+							$getTyphoidDrugs->getTyphoidDrugs();
 
-				<div class="form-group">
-				    <label for="lname">Last Name</label>
-				    <input type="text" class="form-control" id="lname" name="lname" 
-				    aria-describedby="lname" placeholder="Enter Last Name">
+							$getCholeraDrugs =  new Drugs();
+							$getCholeraDrugs->getCholeraDrugs();
+						?>
+					</div>
 				</div>
+				<div class="row">
+					<div col-4>
+						<div class="form-group">
+							<label for="effect">Rate Effectiveness</label>
+							<select class="custom-select custom-select-lg mb-3 form-control" 
+							id="effect" name="effect" required>
+								<option disabled selected value style="color:red">--Choose One--</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+					<div col-4>
+						<div class="form-group">
+							<label for="effect">Rate Affordability</label>
+							<select class="custom-select custom-select-lg mb-3 form-control" 
+								id="afford" name="afford" required>
+								<option disabled selected value style="color:red">--Choose One--</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+					<div col-4>
+						<div class="form-group">
+							<label for="effect">Rate Availability</label>
+							<select class="custom-select custom-select-lg mb-3 form-control" 
+							id="available" name="available" required>
+								<option disabled selected value style="color:red">--Choose One--</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
 
-				<div class="form-group">
-				    <label for="inputEmail">Email address</label>
-				    <input type="email" class="form-control" id="inputEmail" name="inputEmail"
-				    aria-describedby="inputEmail" placeholder="Enter your e-mail">
-				</div>
 
-				<div class="form-group">
-				    <label for="uname">UserName</label>
-				    <input type="text" class="form-control" id="uname" aria-describedby="uname" name="uname" placeholder="Enter UserName">
 				</div>
-
-				<div class="form-group">
-				    <label for="inputpassword">Password</label>
-				    <input type="password" class="form-control" id="inputpassword" placeholder="Enter your Password" name="inputpassword">
-				</div>
-				<button type="submit" name="sign_up" class="btn btn-primary">Submit</button>
+				<button type="submit" name="submitRating" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
 	</div>
 </body>
+	<script>
+		function change(obj) {
+			var selectBox = obj;
+			var selected = selectBox.options[selectBox.selectedIndex].value;
+			var malariaSelect = document.getElementById("malariaDrugs");
+			var choleraSelect = document.getElementById("choleraDrugs");
+			var typhoidSelect = document.getElementById("typhoidDrugs");
+
+			if(selected === 'malaria'){
+				malariaSelect.style.display = "block";
+			}
+			else{
+				malariaSelect.style.display = "none";
+			}
+			if(selected === 'typhoid'){
+			typhoidSelect.style.display = "block";
+			}
+			else{
+			typhoidSelect.style.display = "none";
+			}
+			if(selected === 'cholera'){
+				choleraSelect.style.display = "block";
+			}
+			else{
+				choleraSelect.style.display = "none";
+			}
+		}
+	</script>
 </html>
+
+
