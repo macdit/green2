@@ -15,12 +15,16 @@
 	</div>
 	<div class="row">
 		<div class="col">
-			<p> The top 10 effective drugs dashboard visualization </p>
+			<p class="bg-primary text-white"> The top rated drugs for Malaria, Typhoid, & Cholera </br>
+			    based on their effectiveness, affordability, & availability:</p>
+			<?php
+			$topRatedDrugs =  new ratings();
+			$topRatedDrugs->topRatedDrugs();
+			?>
 		</div>
 		<div class="col">
 			<img src="img/malariakills.jpg" alt="sign" width="600" height="345">	
 		</div>
-		
 	</div>
 	<?php
 	require "elements/footer.php";

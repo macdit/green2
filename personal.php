@@ -30,7 +30,8 @@ if(!isset($_SESSION["valid_user_email"])){
 			$effect = $_POST["effect"];
 			$afford = $_POST["afford"];
 			$avail = $_POST["available"];
-			$new_rating->add_rating($user, $diseasename, $drugname, $effect, $afford, $avail);
+			$pharmacyNames = $_POST["pharmacyNames"];
+			$new_rating->add_rating($user, $diseasename, $drugname, $effect, $afford, $avail, $pharmacyNames);
 		}
 
 	?>
@@ -40,14 +41,11 @@ if(!isset($_SESSION["valid_user_email"])){
 	  <p class="lead"> Please, use below form to rate your recent used drugs. </p>
       
        <?php 
-
        //Set EST timezone
        $timezone = date_default_timezone_set('America/New_York');
-
        // Get current time
        echo date('l jS \of F Y h:i:s A');
        //echo date('l, F j, Y');
-      
       ?>
 
 
@@ -82,6 +80,36 @@ if(!isset($_SESSION["valid_user_email"])){
 							$getCholeraDrugs =  new Drugs();
 							$getCholeraDrugs->getCholeraDrugs();
 						?>
+					</div>
+					<div class="col-2">
+						<label>Select Pharmacy:</label>
+					</div>
+					<div class="col-5">
+					<div class="col-5">
+						<select class="custom-select" onchange="change(this)" 
+								name="dieases" id="dieases" required>
+							<option disabled selected value style="color:red">--Choose One--</option>
+							<option value="malaria">Malaria</option>
+							<option value="typhoid">Typloid</option>
+							<option value="cholera">Cholera</option>
+						</select>
+					</div>
+					  <!-- Create an instance of pharmacies & get pharmacy names -->
+						<?php 
+							$getPharmacyName =  new Pharmacies();
+							$getPharmacyName->getPharmacyName();
+						?>
+						<!---
+						<select class="custom-select" onchange="change(this)" 
+								name="pharmacy" id="pharmacy" required>
+							<option disabled selected value style="color:red">--Choose One--</option>
+							<option value="riteAid">Rite Aid Pharmacy</option>
+							<option value="walmart">Walmart pharmacy</option>
+							<option value="cvs">CVS pharmacy</option>
+							<option value="walgreens">Walgreens Pharmacy</option>
+							<option value="elliot">Elliot Pharmacy</option>
+						</select>
+						-->
 					</div>
 				</div>
 				<div class="row">
@@ -127,8 +155,16 @@ if(!isset($_SESSION["valid_user_email"])){
 							</select>
 						</div>
 					</div>
-
-
+					<!-- Allow user to add comments/feedback-->
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Add additional comments about your experience using this drug:</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="8"></textarea>
+					</div>
+                    <!--Check to be notify if any related ratings-->
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="customCheck1">
+					<label class="custom-control-label" for="customCheck1">Check this box to be notify with any ratings related to this drug. </label>
 				</div>
 				<button type="submit" name="submitRating" class="btn btn-primary">Submit</button>
 			</form>
@@ -163,6 +199,9 @@ if(!isset($_SESSION["valid_user_email"])){
 			}
 		}
 	</script>
+		<?php
+				require "elements/footer.php";
+		?>
 </html>
 
 

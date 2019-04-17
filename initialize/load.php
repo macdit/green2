@@ -4,4 +4,5 @@
 	require "includes/users.php";
 	require "includes/drugs.php";
 	require "includes/ratings.php";
+	require "includes/pharmacies.php";
 ?>

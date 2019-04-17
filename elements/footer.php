@@ -6,9 +6,9 @@ function dynamicCopyRight($startYear){
 	$thisYear = date('Y');
 	if ($startYear < $thisYear){
 		$thisYear = date('Y');
-		return "&copy; $startYear&ndash;$thisYear". ' The Green Boat Foundation';
+		return "&copy; $startYear&ndash;$thisYear". ' The Green Boat';
 	} else {
-		return "&copy; $startYear". ' The Green Boat Foundation';
+		return "&copy; $startYear". ' The Green Boat';
 	}
 }
 

@@ -1,5 +1,5 @@
 <head>
-	<title>Green Boat</title>
+	<title>The Green Boat</title>
 	<!--- Boostrap CDN for faster access via 
 		https://getbootstrap.com/docs/4.3/getting-started/download/#bootstrapcdn -->
 	<!-- Latest complied and modified CSS  -->
@@ -16,7 +16,8 @@
 </head>
 	<header>
 		  <!-- Navbar contents --> 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+		<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #d7f4d4;">
 		  <a class="navbar-brand" href="index.php">The Green Boat</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
