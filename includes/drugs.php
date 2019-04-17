@@ -6,7 +6,7 @@
        // Get drugs for malaria, typhoid, and cholera 
         public function getMalariaDrugs(){
 
-            // Connect to db.
+            // Connect to the db.
             $conn = new mysqli("localhost", "root", "pass123", "boat");
 
             // Retrive malaira drugs info

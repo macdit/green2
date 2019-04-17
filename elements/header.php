@@ -48,7 +48,7 @@
 		        </div>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Health Awareness</a>
+		        <a class="nav-link" href="healthInfo.php">Health Awareness</a>
 		      </li>
 		    </ul>
 		    <form class="form-inline my-2 my-lg-0">

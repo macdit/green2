@@ -4,15 +4,22 @@
         protected $drugs = "drugs";
 
     public function add_rating($uid,$disease,$did,$effect,$afford,$avail,$pharmacyNames){
+        // Connect to the database
         $conn = new mysqli("localhost", "root", "pass123", "boat"); 
+        //Insert user's ratings to the database
         $sql ="INSERT INTO $this->ratings (mid,disease,d_id,r_effectiveness,r_affordability,
         r_availability,p_id) VALUES ('$uid','$disease','$did','$effect','$afford','$avail', '$pharmacyNames');";
         $result = mysqli_query($conn, $sql);
+        //Display feedback to the user if insertion is successfully.
         echo '<p class="alert alert-success text-center" role="alert">Record Saved Successfully</p>';
     
     }
+
+    //Method to retrive the top rated drugs of the selected diseases.
     public function topRatedDrugs(){
+        //Connect to the database
         $conn = new mysqli("localhost", "root", "pass123", "boat"); 
+        
         $malaria_effect_sql = "SELECT ratings.d_id, drugs.d_name AS dname, SUM(ratings.r_effectiveness) 
         AS dsum FROM $this->ratings 
         LEFT JOIN $this->drugs ON ratings.d_id = drugs.d_id WHERE ratings.disease='malaria' 
