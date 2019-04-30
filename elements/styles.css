@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #818181;
+}
+.navbar .navbar-logo a, 
+.navbar .navbar-nav li a {
+    color: #fff;
+}
+.navbar .navbar-nav li a:hover{
+    color: #818181;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+}

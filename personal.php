@@ -33,7 +33,6 @@ if(!isset($_SESSION["valid_user_email"])){
 			$pharmacyNames = $_POST["pharmacyNames"];
 			$new_rating->add_rating($user, $diseasename, $drugname, $effect, $afford, $avail, $pharmacyNames);
 		}
-
 	?>
 
 	<div class="jumbotron">
@@ -85,15 +84,6 @@ if(!isset($_SESSION["valid_user_email"])){
 						<label>Select Pharmacy:</label>
 					</div>
 					<div class="col-5">
-					<div class="col-5">
-						<select class="custom-select" onchange="change(this)" 
-								name="dieases" id="dieases" required>
-							<option disabled selected value style="color:red">--Choose One--</option>
-							<option value="malaria">Malaria</option>
-							<option value="typhoid">Typloid</option>
-							<option value="cholera">Cholera</option>
-						</select>
-					</div>
 					  <!-- Create an instance of pharmacies & get pharmacy names -->
 						<?php 
 							$getPharmacyName =  new Pharmacies();

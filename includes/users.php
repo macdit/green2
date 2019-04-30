@@ -23,7 +23,8 @@
 	 				$checkValidation = "SELECT user_email FROM $this->members WHERE user_email = '$email'";
 	 				$checkResult = mysqli_query($conn, $checkValidation);
 	 				if(mysqli_num_rows($checkResult) == 1){
-	 					echo '<p class="alert alert-success text-center" role="alert">User Saved Successfully</p>';
+						 echo '<p class="alert alert-success text-center" role="alert">User Saved Successfully</p>';
+						 header("Location: login.php");
 	 				}
 	 				else{
 	 					echo '<p class="alert alert-danger text-center" role="alert">Unable to save your result</p>';
@@ -63,7 +64,7 @@
 						$_SESSION['u_uid'] = $row['user_uid'];
 
 	                    // Redirect user to the main page with login success
-						header("Location: personal.php");
+						header("Location: myratings.php");
 					}
 				}else{}
 			}

@@ -9,12 +9,12 @@
 	require "elements/header.php";
 ?>	
 <body>
-        <h3 align="center"> Health Awareness Info: scrap web for recent health info related malaria, Typhoid, & Cholera  </h3>
-    </div>
-</body>
-
-<?php
+    <?php 
+        $displayPharmacy_drugs=new ratings();
+        $displayPharmacy_drugs->displayPharmacy_drugs();
+    ?>
+	<?php
 	require "elements/footer.php";
-   ?>
+    ?>
 </body>
 </html>

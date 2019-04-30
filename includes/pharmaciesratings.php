@@ -9,12 +9,16 @@
 	require "elements/header.php";
 ?>	
 <body>
-        <h3 align="center"> Health Awareness Info: scrap web for recent health info related malaria, Typhoid, & Cholera  </h3>
-    </div>
-</body>
+	<div class="text-center" style="margin-bottom: 20px; margin-top: 60px;">
+		<h1> Pharmacies's Ratings </h1>
+	</div>
 
-<?php
+
+
+
+   
+	<?php
 	require "elements/footer.php";
-   ?>
+    ?>
 </body>
 </html>
