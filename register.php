@@ -23,7 +23,7 @@
 	<div class="container">
 		<div class="text-center">
 			<h2> Create an Account </h2>
-			<h5>It's free and only takes a minutes.</h5>
+			<h5>It's free and only takes a minute.</h5>
 		</div>
 			<form  action="register.php" method="POST">
 				<div class="form-group">

@@ -16,8 +16,8 @@
 	<div class="container">
 	<div class="row">
 		<div class="col">
-			<p class="text-center"> The top rated Pharmacies for Malaria, Typhoid, & Cholera sold drugs</br>
-			     effectiveness, affordability, & availability:</p>
+			<p class="text-center"> The top rated Pharmacies selling drugs for Malaria, Typhoid, & Cholera </br>
+			                        based on drugs' effectiveness, affordability, & availability:</p>
 			<?php   
 			$getMyPharRatings =  new ratings();
 			$getMyPharRatings->topRatedPharmacies();

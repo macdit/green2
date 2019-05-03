@@ -411,6 +411,7 @@
                 <a class="nav-link" id="contact-tab1" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact" aria-selected="false">Availability</a>
                 </li>
             </ul>
+
             <div class="tab-content" id="myTabContent1">
                 <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
                     <ul class="list-group">';
@@ -458,6 +459,7 @@
                     <a class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact" aria-selected="false">Availability</a>
                     </li>
                 </ul>
+                
                 <div class="tab-content" id="myTabContent2">
                     <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">
                         <ul class="list-group">';

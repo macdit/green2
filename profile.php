@@ -6,9 +6,6 @@ if(!isset($_SESSION["valid_user_email"])){
 	header("Location: index.php");
 }
 ?>
-<!DOCTYPE html>
-<html>
-	
 <head>
 	<title>The Green Boat</title>
 	<!--- Boostrap CDN for faster access via 
@@ -63,13 +60,14 @@ if(!isset($_SESSION["valid_user_email"])){
               <li class="nav-item">
 		        <a class="nav-link" href="myratings.php">My Ratings</a>
               </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="myratings.php"><?= $_SESSION["u_first"]. "'s Profile"?>
-				</a>
-			  </li>
+
 			  <li class="nav-item">
 		        <a button class="btn btn-primary" href="login.php">Logout</a>
 		      </li>
+              <li class="nav-item">
+				<a class="nav-link" href="personal.php"><?= $_SESSION["u_first"]. "'s Profile"?>
+				</a>
+			  </li>
               </ul>
 		       <form class="form-inline my-2 my-lg-0">
 		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -79,14 +77,3 @@ if(!isset($_SESSION["valid_user_email"])){
 			</div>
 		</nav>
 	</header>
-	<body>
-	
-	<div class="container" style="margin-bottom: 30px; margin-top: 20px;">
-		        <a button class="btn btn-primary" href="personal.php">Add Ratings</a>
-	</div>
-
-	<?php
-		$my_rating = new Ratings;
-        $my_rating->getMyRatings();
-    ?>
-</body>

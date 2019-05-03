@@ -35,22 +35,22 @@
 		        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="about.php">About US</a>
-		      </li>
-					<li class="nav-item">
 		        <a class="nav-link" href="overallRatedDrugs.php">Drugs'Ratings</a>
 		      </li>
 					<li class="nav-item">
 		        <a class="nav-link" href="overallRatedPharmacies.php">Pharmacies'Ratings</a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="login.php">Signup/Login</a>
+		        <a class="nav-link" href="about.php">About</a>
 		      </li>
-					<li class="nav-item">
+<!-- 			<li class="nav-item">
 		        <a class="nav-link" href="healthInfo.php">Health Awareness</a>
-		      </li>
+		      </li> -->
 		      <li class="nav-item">
-		        <a class="nav-link" href="contact.php">Contact US</a>
+		        <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+					<li class="nav-item">
+		        <a button class="btn btn-primary" href="login.php">Signup/Login</a>
 		      </li>
 		    </ul>
 		    <form class="form-inline my-2 my-lg-0">

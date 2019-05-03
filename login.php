@@ -24,7 +24,7 @@
 		}
 
 	?>
-
+   <div class=container>
 	<div class="container">
 		<h2> Login </h2>
 			<form method="POST">
@@ -41,6 +41,7 @@
 				<button type="submit" name="forgetpassord" class="btn btn-dark">Forget username/password</button>
 				<a href="register.php"> Don't have an account? please sign up here</a>
 			</form>
+		</div>
 		</div>
 </body>
 </html>
