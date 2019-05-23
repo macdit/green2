@@ -280,10 +280,9 @@
                     <th scope="col">Drug</th>
                     <th scope="col">Pharmacy</th>
                     <th scope="col">Effectiveness</th>
-                    <th scope="col">Afffordability</th>
+                    <th scope="col">Affordability</th>
                     <th scope="col">Availability</th>
                     <th scope="col">Date Created</th>
-                    <th colspan="2">Action</th>
                 </tr>
             </thead>
             <tbody>';
@@ -296,12 +295,13 @@
                     <td>'.$result['r_effectiveness'].'</td>
                     <td>'.$result['r_affordability'].'</td>
                     <td>'.$result['r_availability'].'</td>
-                    <td>'.$result['created_date'].'</td>
-                    <td></td>
-                </tr>';    
+                    <td>'.$result['created_date'].'</td>';
+                echo '<td></td>
+                </tr>';   
         }
-      
-            echo' <div class="container">       
+           
+           
+           echo' <div class="container">       
                    
                 </tbody>
                 </table> </div>';

@@ -33,7 +33,7 @@
 		* Helping public finds effective & affordable drugs for Malaria, Typhoid, and Cholera.<br>
 		* Helping public makes data-driven decision to combat counterfeit & poor-quality drugs.<br>
 		* Gives public power to clean local market off fake drugs quickly & effectively.<br>
-		* Analytic tools that can help public re-think how they can fight malaria and typhoid in South Sudan effectively.<br>
+		* Analytic tool that can help public re-think how they can fight malaria and typhoid in South Sudan effectively.<br>
 	</p>
 	</div>
 	<?php

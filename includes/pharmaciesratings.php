@@ -3,22 +3,13 @@
     // if any fatel errors, & stop execution
 	require"initialize/load.php";
 ?>
-<!DOCTYPE html>
-<html>
-<?php
-	require "elements/header.php";
-?>	
-<body>
-	<div class="text-center" style="margin-bottom: 20px; margin-top: 60px;">
-		<h1> Pharmacies's Ratings </h1>
-	</div>
-
-
-
-
-   
+	<!DOCTYPE html>
+	<html>
 	<?php
-	require "elements/footer.php";
-    ?>
-</body>
-</html>
+		require "elements/header.php";
+	?>
+
+	<body>
+		<div class="text-center" style="margin-bottom: 20px; margin-top: 60px;">
+			<h1> Pharmacies's Ratings </h1>
+		</div>

@@ -13,8 +13,6 @@
         $displayPharmacy_drugs=new ratings();
         $displayPharmacy_drugs->displayPharmacy_drugs();
     ?>
-	<?php
-	require "elements/footer.php";
-    ?>
+
 </body>
 </html>

@@ -46,10 +46,10 @@ if(!isset($_SESSION["valid_user_email"])){
 		        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="overallRatedDrugs.php">Drugs'Ratings</a>
+		        <a class="nav-link" href="overallRatedDrugs.php">Drugs</a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="overallRatedPharmacies.php">Pharmacies'Ratings</a>
+		        <a class="nav-link" href="overallRatedPharmacies.php">Pharmacies</a>
 		      </li>
 					<li class="nav-item">
 		        <a class="nav-link" href="about.php">About</a>
@@ -59,13 +59,10 @@ if(!isset($_SESSION["valid_user_email"])){
 		      </li> -->
 		      <li class="nav-item">
 		        <a class="nav-link" href="contact.php">Contact Us</a>
-              </li>
-              <li class="nav-item">
-		        <a class="nav-link" href="myratings.php">My Ratings</a>
-              </li>
+          </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="myratings.php"><?= $_SESSION["u_first"]. "'s Profile"?>
-				</a>
+					<a class="nav-link" href="myratings.php"><?= $_SESSION["u_first"]. "'s Profile"?>
+					</a>
 			  </li>
 			  <li class="nav-item">
 		        <a button class="btn btn-primary" href="login.php">Logout</a>
@@ -84,7 +81,9 @@ if(!isset($_SESSION["valid_user_email"])){
 	<div class="container" style="margin-bottom: 30px; margin-top: 20px;">
 		        <a button class="btn btn-primary" href="personal.php">Add Ratings</a>
 	</div>
-
+	<div class="container">
+     <h3 class="text-center"> My Recent Drugs'Ratings</h3>
+	</div>
 	<?php
 		$my_rating = new Ratings;
         $my_rating->getMyRatings();

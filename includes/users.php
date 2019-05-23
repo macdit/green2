@@ -40,6 +40,7 @@
 			$result = mysqli_query($conn, $sql);
 			$resultCheck = mysqli_num_rows($result);
 			if ($resultCheck == 1){
+
 				// Insert return user's data to raw
 				if ($row = mysqli_fetch_assoc($result)){
 

@@ -20,7 +20,14 @@
 		if(isset($_POST["login"])){
 			$username = $_POST["uname"];
 			$userpass = $_POST["inputpassword"];
+
+				//Check if both fields are empty
+				if($username == '' || $userpass ==''){
+					// If false, redirect to the login page
+					echo '<p class="alert alert-danger text-center" role="alert">The username or password cannot be empty</p>';
+				} else {
 			$auth_user -> userLogin($username, $userpass);
+				}
 		}
 
 	?>

@@ -35,10 +35,10 @@
 		        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="overallRatedDrugs.php">Drugs'Ratings</a>
+		        <a class="nav-link" href="overallRatedDrugs.php">Drugs</a>
 		      </li>
-					<li class="nav-item">
-		        <a class="nav-link" href="overallRatedPharmacies.php">Pharmacies'Ratings</a>
+									<li class="nav-item">
+		        <a class="nav-link" href="overallRatedPharmacies.php">Pharmacies</a>
 		      </li>
 					<li class="nav-item">
 		        <a class="nav-link" href="about.php">About</a>

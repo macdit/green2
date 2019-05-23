@@ -15,56 +15,10 @@
      ?>
      <!-- Display the record from the database -->
      <?php
-     //Connect to the database and display error if failed
-    $conn = new mysqli('localhost', 'root', 'pass123', 'boat') or die(mysqli_error($conn));
-    $result = $conn->query("SELECT * FROM contact") or die($conn->error); 
-    //pre_r($result);
-    //pre_r($result->fetch_assoc());
+        //Connect to the database and display error if failed
+        $conn = new mysqli('localhost', 'root', 'pass123', 'boat') or die(mysqli_error($conn));
+        $result = $conn->query("SELECT * FROM contact") or die($conn->error); 
     ?>
-
-
-    <!---
-    <div class="row justify-content-center">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Comment</th>
-                    <th colspan="2">Action</th>
-                </tr>
-            </thead>
-        -->
-    <!-- 
-        <?php
-            while ($row = $result->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['address']; ?></td>
-                <td><?php echo $row['phone']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['comment']; ?></td>
-                <td>
-                    <a href="index.php?edit=<?php echo $row['id']; ?>"
-                        class="btn btn-info">Edit</a>
-                    <a href="processform.php?delete=<?php echo $row['id']; ?>"
-                        class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
-<?php endwhile; ?>
-        </table>
-    </div>
-    <?php
-        function pre_r($array){
-            echo '<pre>';
-            print_r($array);
-            echo '<pre>';
-        }
-    ?>
-    </div>
-       -->
 <body>
    <h2 class="text-center"> Contact US </h2>
    <div class="container">

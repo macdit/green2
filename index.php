@@ -24,9 +24,9 @@
 				<a href="register.php" class="btn btn-primary">Sign up</a>
 				<a href="about.php" class="btn btn-secondary">Learn more</a>
 			</div>
-			</div>
-			<div class="clearfix">
-			</div>
+		</div>
+	<div class="clearfix">
+	</div>
 		</div>
        </main>
 		<div class="col">  
